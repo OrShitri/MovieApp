@@ -1,0 +1,18 @@
+<h1>Name: {{movie.name}}</h1>
+<h2>Year: {{movie.year}}</h2>
+<h3>Did I watch:
+    <span [ngStyle]="{
+    'color': movie.watched ? 'green' : 'red'
+    }">
+        <span *ngIf="movie.watched">YES</span>
+        <span *ngIf="!movie.watched">NO</span>
+    </span>
+</h3>
+
+
+<figure>
+    <img [src]="movie.image" width="700" [alt]="movie.name" />
+    <figcaption><strong>Description: </strong>
+        <em>{{movie.description}}</em>
+    </figcaption>
+</figure>

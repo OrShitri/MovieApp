@@ -1,0 +1,71 @@
+<div>
+    <button (click)="hideEditor()">Show Editor</button>
+</div>
+
+<br>
+<fieldset [style.display]="isVisible ? 'block' : 'none'">
+    <legend>Edit Movie Details</legend>
+    <div class="div-form">
+        <div class="div-label">
+            <div>
+                <strong>Name:</strong>
+            </div>
+
+            <br>
+            <div>
+                <strong>Year:</strong>
+            </div>
+
+            <br>
+            <div>
+                <strong>Description:</strong>
+            </div>
+
+            <br>
+            <div>
+                <strong>Image:</strong>
+            </div>
+
+            <br>
+            <div>
+                <strong>Watched:</strong>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <input type="text" [(ngModel)]="movie.name" />
+            </div>
+
+            <br>
+            <div>
+                <input type="number" [(ngModel)]="movie.year" />
+            </div>
+
+            <br>
+            <div>
+                <input type="text" [(ngModel)]="movie.description" />
+            </div>
+
+            <br>
+            <div>
+                <input type="text" [(ngModel)]="movie.image" />
+            </div>
+
+            <br>
+            <div>
+                <label [for]="movie.name">Yes</label>
+                <input [id]="movie.name" [name]="movie.name" type="radio" [value]="true"
+                    [checked]="movie.watched" [(ngModel)]="movie.watched" />
+
+                <label [for]="movie.year">No</label>
+                <input [id]="movie.year" [name]="movie.name" type="radio" [value]="false"
+                    [checked]="!movie.watched" [(ngModel)]="movie.watched" />
+            </div>
+        </div>
+    </div>
+</fieldset>
+
+
+<br>
+<hr color="gray" size="5px" width="800px">

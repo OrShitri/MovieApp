@@ -1,0 +1,72 @@
+<fieldset>
+    <legend>Add a New Movie</legend>
+    <div class="div-form">
+        <div class="div-label">
+            <div>
+                <strong>Name:</strong>
+            </div>
+
+            <br>
+            <div>
+                <strong>Year:</strong>
+            </div>
+
+            <br>
+            <div>
+                <strong>Description:</strong>
+            </div>
+
+            <br>
+            <div>
+                <strong>Image:</strong>
+            </div>
+
+            <br>
+            <div>
+                <strong>Watched:</strong>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <input id="movie-add-name" #nameInput type="text"
+                    placeholder="Enter the name of a movie" />
+            </div>
+
+            <br>
+            <div>
+                <input id="movie-add-year" #yearInput type="number" placeholder="Enter the year" />
+            </div>
+
+            <br>
+            <div>
+                <input id="movie-add-description" #descriptionInput type="text"
+                    placeholder="Enter the movie description" />
+            </div>
+
+            <br>
+            <div>
+                <input id="movie-add-image" #imageInput type="text"
+                    placeholder="Enter image address" />
+            </div>
+
+            <br>
+            <div>
+                <label for="movie-add-watched-yes">Yes</label>
+                <input id="movie-add-watched-yes" name="new-movie" type="radio"
+                    (click)="selectedYes()" />
+
+                <label for="movie-add-watched-no">No</label>
+                <input id="movie-add-watched-no" name="new-movie" type="radio"
+                    (click)="selectedNo()" />
+            </div>
+        </div>
+    </div>
+
+
+    <div class="submit">
+        <button (click)="addHandler(nameInput.value, yearInput.value, descriptionInput.value,
+        imageInput.value)">Add
+            Movie</button>
+    </div>
+</fieldset>

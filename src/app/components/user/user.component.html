@@ -1,0 +1,67 @@
+<h1>Name: {{user.name}}</h1>
+<h2>Email: {{user.email}}</h2>
+<h3>Username: {{user.username}}</h3>
+<h3>Password: {{user.password}}</h3>
+
+<div>
+    <button (click)="hideEditor()">Edit</button>
+    <button (click)="deleteHandler()">Delete</button>
+    <button (click)="duplicateHandler()">Duplicate</button>
+</div>
+
+<br>
+<fieldset [style.display]="isVisible ? 'block' : 'none'">
+    <legend>Edit User Details</legend>
+    <div class="div-form">
+        <div class="div-label">
+            <div>
+                <strong>Username:</strong>
+            </div>
+
+            <br>
+            <div>
+                <strong>Password:</strong>
+            </div>
+
+            <br>
+            <div>
+                <strong>Name:</strong>
+            </div>
+
+            <br>
+            <div>
+                <strong>Email:</strong>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <input #usernameInput type="text" [value]="user.username" />
+            </div>
+
+            <br>
+            <div>
+                <input #passwordInput type="password" [value]="user.password" />
+            </div>
+
+            <br>
+            <div>
+                <input #nameInput type="text" [value]="user.name" />
+            </div>
+
+            <br>
+            <div>
+                <input #emailInput type="email" [value]="user.email" />
+            </div>
+        </div>
+    </div>
+
+    <div class="submit">
+        <button
+            (click)="updateDetails(usernameInput.value, passwordInput.value, nameInput.value,emailInput.value)">Submit</button>
+    </div>
+</fieldset>
+
+
+<br>
+<hr color="gray" size="5px" width="800px">

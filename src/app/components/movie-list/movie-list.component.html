@@ -1,0 +1,5 @@
+<movie-add (add)="addHandler($event)"></movie-add>
+<div *ngFor="let movie of movies">
+    <movie-item [movie]="movie"></movie-item>
+    <movie-editor [movie]="movie" (change)="updateDetails(movie)"></movie-editor>
+</div>

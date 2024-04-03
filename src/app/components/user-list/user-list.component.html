@@ -1,0 +1,5 @@
+<div *ngFor="let user of users">
+    <user [user]="user" (edit)="editHandler($event)" (delete)="deleteHandler($event)"
+        (duplicate)="duplicateHandler($event)">
+    </user>
+</div>
