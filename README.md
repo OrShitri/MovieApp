@@ -1,5 +1,18 @@
 # MovieApp
+An Angular application that displays a movie catalog and users. 
+Movies can be edited or added, and users can be duplicated/edited/deleted.
+The application uses attribute directives and structural directives, Input and Output decorators, EventEmitters and more.
+The application works with the server side of json-server, by using HttpClient in Get, Post, Put, Delete requests.
 
+## Installing
+* Pull from here
+* Run npm i
+
+## Executing Program
+* Run npm run server
+* Run ng serve
+
+## Version
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.10.
 
 ## Development server
